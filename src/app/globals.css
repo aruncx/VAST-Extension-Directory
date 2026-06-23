@@ -21,44 +21,52 @@
   --radius-sm: calc(var(--radius) - 4px);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-blob: blob 15s infinite alternate ease-in-out;
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(40px, -60px) scale(1.1); }
+  66% { transform: translate(-30px, 30px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }
 
 @layer base {
   :root {
-    --background: #FAF8F5;
-    --foreground: #2C2C2C;
+    --background: #FDFBF7;
+    --foreground: #1E293B;
     --card: #FFFFFF;
-    --card-foreground: #2C2C2C;
+    --card-foreground: #1E293B;
     --primary: #8B4500;
     --primary-foreground: #FFFFFF;
-    --secondary: #B67A45;
+    --secondary: #0F172A;
     --secondary-foreground: #FFFFFF;
-    --accent: #D9B38C;
-    --accent-foreground: #2C2C2C;
-    --muted: #EDE8E1;
-    --muted-foreground: #6B5D54;
-    --border: #E5DDD4;
-    --input: #E5DDD4;
+    --accent: #EAB308;
+    --accent-foreground: #1E293B;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
     --ring: #8B4500;
-    --radius: 0.75rem;
+    --radius: 1rem;
   }
 
   .dark {
-    --background: #1A1512;
-    --foreground: #EAE0D5;
-    --card: #261E17;
-    --card-foreground: #EAE0D5;
-    --primary: #B67A45;
-    --primary-foreground: #1A1512;
-    --secondary: #8B4500;
-    --secondary-foreground: #EAE0D5;
-    --accent: #8A6B4E;
-    --accent-foreground: #EAE0D5;
-    --muted: #3B3028;
-    --muted-foreground: #A69B91;
-    --border: #4D4036;
-    --input: #4D4036;
-    --ring: #B67A45;
+    --background: #090B10;
+    --foreground: #F8FAFC;
+    --card: #1E293B;
+    --card-foreground: #F8FAFC;
+    --primary: #D68F4D;
+    --primary-foreground: #000000;
+    --secondary: #1E3A8A;
+    --secondary-foreground: #F8FAFC;
+    --accent: #EAB308;
+    --accent-foreground: #000000;
+    --muted: #1E293B;
+    --muted-foreground: #94A3B8;
+    --border: #334155;
+    --input: #334155;
+    --ring: #D68F4D;
   }
 }
 

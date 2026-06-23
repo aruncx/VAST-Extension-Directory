@@ -46,6 +46,15 @@ export default function RootLayout({
           defaultTheme="light"
           disableTransitionOnChange
         >
+          {/* Background Image */}
+          <div className="fixed inset-0 z-[-2] pointer-events-none">
+            {/* The user will upload their image as campus-bg.jpg in the public folder */}
+            <img src="/campus-bg.jpg" alt="Background" className="w-full h-full object-cover" />
+          </div>
+          
+          {/* Overlay to ensure text readability */}
+          <div className="fixed inset-0 z-[-1] bg-white/20 dark:bg-black/60 backdrop-blur-md pointer-events-none transition-colors duration-300"></div>
+
           <Navbar />
           <main className="flex-grow flex flex-col">
             {children}

@@ -46,7 +46,7 @@ export function DepartmentView({ departmentName, data }: { departmentName: strin
       </div>
 
       {/* Toolbar */}
-      <div className="bg-card border border-border rounded-2xl p-4 shadow-sm flex flex-col sm:flex-row gap-4 justify-between items-center">
+      <div className="bg-white/60 dark:bg-slate-900/50 backdrop-blur-xl border border-white/50 dark:border-slate-700/50 shadow-xl rounded-[24px] p-4 flex flex-col sm:flex-row gap-4 justify-between items-center">
         <div className="relative w-full sm:w-96">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <input
@@ -54,16 +54,16 @@ export function DepartmentView({ departmentName, data }: { departmentName: strin
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search within department..."
-            className="w-full pl-12 pr-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all text-foreground"
+            className="w-full pl-12 pr-4 py-3 bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 shadow-inner rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all text-foreground"
           />
         </div>
       </div>
 
       {/* Table */}
-      <div className="bg-card border border-border rounded-2xl shadow-sm overflow-hidden">
+      <div className="bg-white/60 dark:bg-slate-900/50 backdrop-blur-xl border border-white/50 dark:border-slate-700/50 shadow-xl rounded-[24px] overflow-hidden mt-6">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm whitespace-nowrap">
-            <thead className="bg-muted/50 text-muted-foreground border-b border-border uppercase tracking-wider text-xs font-semibold">
+            <thead className="bg-transparent text-muted-foreground uppercase tracking-wider text-xs font-semibold">
               <tr>
                 <th className="px-6 py-4 cursor-pointer hover:bg-muted/80 transition-colors" onClick={() => handleSort('designation')}>
                   <div className="flex items-center gap-2">Details <ArrowUpDown className="w-3.5 h-3.5 opacity-50" /></div>
@@ -75,7 +75,7 @@ export function DepartmentView({ departmentName, data }: { departmentName: strin
 
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
+            <tbody className="divide-y divide-border/20">
               {sortedData.length > 0 ? sortedData.map((row) => (
                 <tr key={row.id} className="hover:bg-muted/30 transition-colors group">
                   <td className="px-6 py-4">
@@ -84,7 +84,7 @@ export function DepartmentView({ departmentName, data }: { departmentName: strin
                   </td>
 
                   <td className="px-6 py-4">
-                    <span className="inline-flex items-center px-4 py-1.5 rounded-xl text-lg font-black bg-primary text-primary-foreground shadow-md tracking-wider">
+                    <span className="inline-flex items-center px-4 py-1.5 rounded-xl text-lg font-black bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 text-primary shadow-sm tracking-wider">
                       {row.extension}
                     </span>
                   </td>

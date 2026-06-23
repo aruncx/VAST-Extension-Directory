@@ -22,8 +22,8 @@ export function GlobalSearch({ data }: { data: ExtensionEntry[] }) {
   }, [query, data]);
 
   return (
-    <div className="relative w-full shadow-2xl rounded-2xl bg-card/80 backdrop-blur-md border border-border p-2 sm:p-4">
-      <div className="relative flex items-center bg-background rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-primary transition-all shadow-inner">
+    <div className="relative w-full rounded-[24px] bg-white/60 dark:bg-slate-900/50 backdrop-blur-xl border border-white/50 dark:border-slate-700/50 shadow-xl p-2 sm:p-4 z-50">
+      <div className="relative flex items-center bg-white/50 dark:bg-slate-800/50 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-primary transition-all border border-white/40 dark:border-slate-600/50 shadow-inner">
         <Search className="absolute left-4 w-6 h-6 text-muted-foreground" />
         <input
           type="text"
@@ -35,7 +35,7 @@ export function GlobalSearch({ data }: { data: ExtensionEntry[] }) {
       </div>
 
       {query.trim() && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-xl shadow-2xl overflow-hidden z-50 max-h-[60vh] overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl border border-white/50 dark:border-slate-700/50 rounded-2xl shadow-2xl overflow-hidden z-50 max-h-[60vh] overflow-y-auto">
           {results.length > 0 ? (
             <ul className="divide-y divide-border">
               {results.map((entry) => (
@@ -52,7 +52,7 @@ export function GlobalSearch({ data }: { data: ExtensionEntry[] }) {
                       <Building2 className="w-3.5 h-3.5" /> {entry.designation} <span className="opacity-50">•</span> {entry.department}
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg font-bold whitespace-nowrap self-start sm:self-auto">
+                  <div className="flex items-center justify-center gap-2 bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 text-primary px-4 py-2 rounded-lg font-bold whitespace-nowrap self-start sm:self-auto shadow-sm">
                     <Phone className="w-4 h-4" /> 
                     <span>{entry.extension}</span>
                   </div>

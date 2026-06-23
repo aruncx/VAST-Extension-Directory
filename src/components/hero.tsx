@@ -5,25 +5,7 @@ import { Search, Building2 } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background pt-24 pb-32">
-      {/* Decorative Network Nodes */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-        <motion.div
-          animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary rounded-full mix-blend-multiply filter blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, 30, 0], x: [0, -15, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/3 right-1/4 w-40 h-40 bg-secondary rounded-full mix-blend-multiply filter blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, -15, 0], x: [0, 20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/4 left-1/3 w-48 h-48 bg-accent rounded-full mix-blend-multiply filter blur-3xl"
-        />
-      </div>
+    <section className="relative pt-24 pb-32">
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
         
@@ -53,14 +35,14 @@ export function Hero() {
         >
           <a
             href="#search-section"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-primary-foreground bg-primary rounded-xl shadow-lg hover:bg-primary/90 hover:shadow-xl transition-all"
+            className="inline-flex items-center justify-center px-8 py-3.5 text-base font-black text-primary-foreground bg-primary/90 backdrop-blur-md rounded-2xl shadow-xl hover:bg-primary transition-all border border-white/20"
           >
             <Search className="w-5 h-5 mr-2" />
             Search Directory
           </a>
           <a
             href="#departments-section"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-primary bg-card border border-border rounded-xl shadow-sm hover:bg-muted hover:border-primary/30 transition-all"
+            className="inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-foreground bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-2xl shadow-lg hover:bg-white/70 dark:hover:bg-slate-800/70 transition-all border border-white/40 dark:border-slate-600/50"
           >
             <Building2 className="w-5 h-5 mr-2" />
             Browse Departments

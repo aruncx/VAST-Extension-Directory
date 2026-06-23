@@ -14,7 +14,7 @@ export function DepartmentGrid({
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-2">
-        <div className="p-2 bg-primary/10 rounded-lg">
+        <div className="p-2 bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 rounded-lg shadow-sm">
           <Layers className="w-6 h-6 text-primary" />
         </div>
         <h2 className="text-2xl font-bold text-foreground tracking-tight">Departments & Offices</h2>
@@ -26,10 +26,10 @@ export function DepartmentGrid({
             <Link
               key={dept}
               href={`/departments/${encodeURIComponent(dept)}`}
-              className="group bg-card border border-border p-5 rounded-2xl shadow-sm hover:shadow-xl hover:border-primary/50 hover:-translate-y-1 transition-all flex items-center justify-between"
+              className="group bg-white/60 dark:bg-slate-900/50 backdrop-blur-xl border border-white/50 dark:border-slate-700/50 p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/70 dark:hover:bg-slate-900/70 hover:-translate-y-1 transition-all flex items-center justify-between"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center group-hover:bg-primary/10 group-hover:scale-110 transition-all shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 shadow-inner flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/30 group-hover:scale-110 transition-all shrink-0">
                   <Building2 className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
                 <div>
