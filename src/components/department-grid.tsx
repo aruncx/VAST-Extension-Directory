@@ -34,7 +34,7 @@ export function DepartmentGrid({
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground line-clamp-2 leading-tight">{dept}</h3>
-                  <p className="text-sm text-muted-foreground mt-1 font-medium">
+                  <p className="text-sm text-foreground/90 mt-1 font-semibold drop-shadow-sm">
                     {count} {count === 1 ? "contact" : "contacts"}
                   </p>
                 </div>

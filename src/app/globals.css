@@ -36,17 +36,17 @@
 @layer base {
   :root {
     --background: #FDFBF7;
-    --foreground: #1E293B;
+    --foreground: #0F172A;
     --card: #FFFFFF;
-    --card-foreground: #1E293B;
+    --card-foreground: #0F172A;
     --primary: #8B4500;
     --primary-foreground: #FFFFFF;
     --secondary: #0F172A;
     --secondary-foreground: #FFFFFF;
     --accent: #EAB308;
-    --accent-foreground: #1E293B;
+    --accent-foreground: #0F172A;
     --muted: #F1F5F9;
-    --muted-foreground: #64748B;
+    --muted-foreground: #334155;
     --border: #E2E8F0;
     --input: #E2E8F0;
     --ring: #8B4500;

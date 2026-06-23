@@ -22,7 +22,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10"
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 font-medium drop-shadow-sm"
         >
           Find extension numbers of departments, offices, laboratories and staff instantly.
         </motion.p>
