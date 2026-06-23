@@ -65,12 +65,12 @@ export function DepartmentView({ departmentName, data }: { departmentName: strin
           <table className="w-full text-left text-sm whitespace-nowrap">
             <thead className="bg-transparent text-muted-foreground uppercase tracking-wider text-xs font-semibold">
               <tr>
-                <th className="px-6 py-4 cursor-pointer hover:bg-muted/80 transition-colors" onClick={() => handleSort('designation')}>
-                  <div className="flex items-center gap-2">Details <ArrowUpDown className="w-3.5 h-3.5 opacity-50" /></div>
-                </th>
-
                 <th className="px-6 py-4 cursor-pointer hover:bg-muted/80 transition-colors" onClick={() => handleSort('extension')}>
                   <div className="flex items-center gap-2">Extension <ArrowUpDown className="w-3.5 h-3.5 opacity-50" /></div>
+                </th>
+
+                <th className="px-6 py-4 cursor-pointer hover:bg-muted/80 transition-colors" onClick={() => handleSort('designation')}>
+                  <div className="flex items-center gap-2">Details <ArrowUpDown className="w-3.5 h-3.5 opacity-50" /></div>
                 </th>
 
               </tr>
@@ -79,14 +79,14 @@ export function DepartmentView({ departmentName, data }: { departmentName: strin
               {sortedData.length > 0 ? sortedData.map((row) => (
                 <tr key={row.id} className="hover:bg-muted/30 transition-colors group">
                   <td className="px-6 py-4">
-                    <div className="font-bold text-foreground text-base mb-0.5">{row.designation || 'Staff'}</div>
-                    <div className="text-sm text-muted-foreground font-medium">{row.name}</div>
-                  </td>
-
-                  <td className="px-6 py-4">
                     <span className="inline-flex items-center px-4 py-1.5 rounded-xl text-lg font-black bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 text-primary shadow-sm tracking-wider">
                       {row.extension}
                     </span>
+                  </td>
+
+                  <td className="px-6 py-4">
+                    <div className="font-bold text-foreground text-base mb-0.5">{row.designation || 'Staff'}</div>
+                    <div className="text-sm text-muted-foreground font-medium">{row.name}</div>
                   </td>
 
                 </tr>
