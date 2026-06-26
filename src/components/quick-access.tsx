@@ -26,7 +26,7 @@ export function QuickAccess({ data }: { data: ExtensionEntry[] }) {
             <p className="text-[10px] sm:text-xs font-bold tracking-wider text-primary uppercase mb-1 line-clamp-1">{contact.department}</p>
             <h3 className="text-foreground font-semibold text-sm sm:text-base line-clamp-2 leading-tight">{contact.designation || contact.name}</h3>
           </div>
-          <div className="mt-3 flex items-center justify-center text-primary font-bold bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 shadow-inner px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all w-full">
+          <div className="mt-3 flex items-center justify-center text-primary font-bold bg-white/50 dark:bg-slate-800/50 border border-white/40 dark:border-slate-600/50 shadow-inner px-2 py-1.5 sm:px-3 sm:py-2 rounded-lg group-hover:bg-primary group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black dark:group-hover:border-white group-hover:border-primary transition-all w-full">
             <span className="text-sm sm:text-lg">{contact.extension}</span>
           </div>
         </button>

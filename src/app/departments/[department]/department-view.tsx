@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from "react";
 import { ExtensionEntry } from "@/lib/data";
-import { Search, ArrowUpDown } from "lucide-react";
+import { Search, ArrowUpDown, Home } from "lucide-react";
+import Link from "next/link";
 
 export function DepartmentView({ departmentName, data }: { departmentName: string, data: ExtensionEntry[] }) {
   const [query, setQuery] = useState("");
@@ -38,10 +39,19 @@ export function DepartmentView({ departmentName, data }: { departmentName: strin
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight">{departmentName}</h1>
-          <p className="text-muted-foreground mt-2 text-lg">{data.length} {data.length === 1 ? 'Contact' : 'Contacts'} Directory</p>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex items-center gap-4">
+          <Link 
+            href="/"
+            className="p-3 bg-white/60 dark:bg-slate-800/60 hover:bg-white dark:hover:bg-slate-700 backdrop-blur-xl border border-white/50 dark:border-slate-600/50 rounded-2xl shadow-sm hover:shadow-md transition-all text-primary hover:text-primary/80 group flex-shrink-0"
+            title="Back to Home"
+          >
+            <Home className="w-6 h-6 group-hover:scale-110 transition-transform" />
+          </Link>
+          <div>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight">{departmentName}</h1>
+            <p className="text-muted-foreground mt-1 text-lg">{data.length} {data.length === 1 ? 'Contact' : 'Contacts'} Directory</p>
+          </div>
         </div>
       </div>
 

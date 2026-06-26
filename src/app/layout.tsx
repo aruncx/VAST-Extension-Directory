@@ -53,7 +53,7 @@ export default function RootLayout({
           </div>
           
           {/* Overlay to ensure text readability */}
-          <div className="fixed inset-0 z-[-1] bg-white/20 dark:bg-black/60 backdrop-blur-md pointer-events-none transition-colors duration-300"></div>
+          <div className="fixed inset-0 z-[-1] bg-white/70 dark:bg-black/60 backdrop-blur-md pointer-events-none transition-colors duration-300"></div>
 
           <Navbar />
           <main className="flex-grow flex flex-col">
